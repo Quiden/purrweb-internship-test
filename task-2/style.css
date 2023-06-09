@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 800px;
+  margin: 20px auto;
+  background-color: aliceblue;
+}
+
+.button {
+  height: 40px;
+  border-radius: 5px;
+}
+
+#slider {
+  height: 200px;
+  width: 300px;
+  margin: 0 20px;
+  /* overflow: hidden; */
+}
+
+.slider-wrapper {
+  height: 200px;
+  width: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  /* transition: 0.5s; */
+}

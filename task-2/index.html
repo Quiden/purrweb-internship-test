@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <button id="slider-prev" class="slider-prev button">Prev</button>
+        <div id="slider">
+            <div id="slider-wrapper" class="slider-wrapper">
+                <div class="slide">
+                    <img src="./images/1.svg" width="300px" height="200px" alt="1" />
+                </div>
+                <div class="slide">
+                    <img src="./images/2.svg" width="300px" height="200px" alt="2" />
+                </div>
+                <div class="slide">
+                    <img src="./images/3.svg" width="300px" height="200px" alt="3" />
+                </div>
+                <div class="slide">
+                    <img src="./images/4.svg" width="300px" height="200px" alt="4" />
+                </div>
+                <div class="slide">
+                    <img src="./images/5.svg" width="300px" height="200px" alt="5" />
+                </div>
+                <div class="slide">
+                    <img src="./images/6.svg" width="300px" height="200px" alt="6" />
+                </div>
+            </div>
+        </div>
+        <button id="slider-next" class="slider-next button">Next</button>
+        <div class="slider-pagination">
+            <button class="slider-indicator" onclick="goToElement(1)">1</button>
+            <button class="slider-indicator" onclick="goToElement(2)">2</button>
+            <button class="slider-indicator" onclick="goToElement(3)">3</button>
+            <button class="slider-indicator" onclick="goToElement(4)">4</button>
+            <button class="slider-indicator" onclick="goToElement(5)">5</button>
+            <button class="slider-indicator" onclick="goToElement(6)">6</button>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
