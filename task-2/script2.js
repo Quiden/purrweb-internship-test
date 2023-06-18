@@ -19,6 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
             let timePassed = Date.now() - start;
     
             if (timePassed > viewport * 2) {
+                if (position + viewport > (dots.length) * viewport) {
+                    position = 0;
+                    sliderLine.style.left = -viewport + 'px';
+                    dotIndex = 0;
+                }
+                nextButton.disabled = false;
+                position += viewport;
+                thisSlide(dotIndex);
                 clearInterval(timer);
                 return;
             }
@@ -26,17 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             sliderLine.style.left = -(position + timePassed / 2) + 'px';
     
         }, 3);
-
-        setTimeout(() => {
-            if (position + viewport > (dots.length) * viewport) {
-                position = 0;
-                sliderLine.style.left = -viewport + 'px';
-                dotIndex = 0;
-            }
-            nextButton.disabled = false;
-            position += viewport;
-            thisSlide(dotIndex);
-        }, viewport * 2);
     }
 
     const prevSlide = () => {
@@ -48,23 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
             let timePassed = Date.now() - start;
     
             if (timePassed > viewport * 2) {
+                position -= viewport;
+                if (position - viewport < 0) {
+                    position = (dots.length) * viewport;
+                    sliderLine.style.left = -(dots.length) * viewport;
+                    dotIndex = dots.length - 1;
+                }
+                prevButton.disabled = false;
+                thisSlide(dotIndex);
                 clearInterval(timer);
                 return;
             }
             sliderLine.style.left = -(position - timePassed / 2) + 'px';
     
         }, 2);
-
-        setTimeout(() => {
-            position -= viewport;
-            if (position - viewport < 0) {
-                position = (dots.length) * viewport;
-                sliderLine.style.left = -(dots.length) * viewport;
-                dotIndex = dots.length - 1;
-            }
-            prevButton.disabled = false;
-            thisSlide(dotIndex);
-        }, viewport * 2);
     }
 
     const thisSlide = (index) => {
