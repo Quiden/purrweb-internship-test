@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/icon-logo.svg" type="image/svg">
     <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet"> -->
     <title>Task 1</title>
 </head>
 <body>
@@ -84,8 +84,15 @@
                         </button>
                     </div>
                     <div class="mainInfo__right">
-                        <img class="mainInfo__hero" src="./images/hero.png" width="490" height="522" alt="hero">
-                        <img class="mainInfo__background" src="./images/background-hero.svg" alt="background-hero">
+                        <picture class="mainInfo__hero-container">
+                            <!-- <source class="mainInfo__hero" srcset="./images/hero-large.webp" media="(min-width: 2000px)"> -->
+                            <source class="mainInfo__hero" srcset="./images/hero-large.png" media="(min-width: 376px)">
+                            <img class="mainInfo__hero" src="./images/hero-small.png" alt="hero">
+                        </picture>
+                        <picture class="mainInfo__background-container">
+                            <source class="mainInfo__hero" srcset="./images/background-hero-large.svg" media="(min-width: 376px)">
+                            <img class="mainInfo__background" src="./images/background-hero-small.svg" alt="background-hero">
+                        </picture>
                     </div>
                 </div>
 

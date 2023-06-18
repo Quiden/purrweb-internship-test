@@ -29,6 +29,12 @@ const findImages = () =>
     .pipe(flatten({ incudeParents: 0 }))
     .pipe(gulp.dest("build/images/"));  
 
+const findFonts = () =>
+  gulp
+    .src("src/fonts/**/*")
+    .pipe(flatten({ incudeParents: 0 }))
+    .pipe(gulp.dest("build/fonts/")); 
+
 const hotReload = async () => bSync.reload();
 
 const serve = () => {
@@ -41,7 +47,7 @@ const serve = () => {
   gulp.watch("src/**", gulp.parallel(build, hotReload));
 }
 
-const build = gulp.parallel(buildHtml, concatCss, findImages, concatScripts);
+const build = gulp.parallel(buildHtml, concatCss, findImages, concatScripts, findFonts);
 
 export default gulp.series(
     build,

@@ -29,6 +29,7 @@
 
 .mainInfo__left {
   max-width: 671px;
+  flex: 0 0 100%;
   margin: 82px 0 0 50px;
 }
 
@@ -71,50 +72,56 @@
 @media (width <= 376px) {
   .mainInfo__button {
     width: 100%;
+    margin-bottom: 0;
   }
 }
 
 .mainInfo__right {
-  position: relative;
-  left: 201px;
   display: flex;
+  overflow: hidden;
   align-items: end;
   justify-content: end;
+  margin-right: -60px;
 }
 
 @media (width <= 376px) {
   .mainInfo__right {
-    left: 0;
+    overflow: hidden;
+    flex: 0 0 100%;
     align-items: center;
     justify-content: center;
+    padding-top: 124px;
+    margin-right: -16px;
   }
 }
 
-.mainInfo__hero {
-  position: relative;
+.mainInfo__hero-container {
   z-index: 6;
-
-  /* height: 100%;
-  width: 100%; */
-  left: -75px;
 }
 
-.mainInfo__background {
-  /* height: 100%;
-  width: 100%; */
-  position: absolute;
+.mainInfo__hero {
+  transform: translate(510px, 0);
+}
+
+.mainInfo__background-container {
   z-index: 5;
 }
 
 @media (width <= 376px) {
-  .mainInfo__hero {
-    left: 0;
+  .mainInfo__hero-container {
     max-width: 100%;
-    max-height: 360px;
+  }
+
+  .mainInfo__hero {
+    transform: translate(155px, -10px);
+  }
+
+  .mainInfo__background-container {
+    max-width: 100%;
   }
   
   .mainInfo__background {
-    max-width: 100%;
+    transform: translate(-96px, 10px);
   }
 }
 

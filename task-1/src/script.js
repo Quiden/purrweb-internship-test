@@ -44,7 +44,7 @@ const initialValidationForm = () => {
 const initialAnimationText = () => {
   const screenWidth = window.screen.width;
   const shift = 400;
-  
+
   let textAnimation1 = document.querySelector('.textAnimation__row1');
   let textAnimation2 = document.querySelector('.textAnimation__row2');
   let textAnimation3 = document.querySelector('.textAnimation__row3');
@@ -60,7 +60,7 @@ const initialAnimationText = () => {
 
     interval1++;
     interval2--;
-    interval3++;  
+    interval3++;
 
     if (interval1 === screenWidth) interval1 = -(textAnimation1.offsetWidth + shift);
     if (interval2 === -(textAnimation2.offsetWidth + shift)) interval2 = screenWidth;
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initialValidationForm();
   initialAnimationText();
   initialModalButtons();
-  
+
   // Cookies
   initialCookies();
 
