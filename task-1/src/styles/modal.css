@@ -1,0 +1,274 @@
+.cookie-alert {
+  position: fixed;
+  z-index: 1000;
+  bottom: 30px;
+  left:50%;
+  width: 1285px;
+  height: 117px;
+  border-radius: 16px;
+  background: var(--color-white);
+  box-shadow: -10px -5px 30px rgb(141 141 141 / 10%);
+  color: black;
+  transform:translate(-50%, 200%);
+}
+
+@media (width <= 376px) {
+  .cookie-alert {
+    position: fixed;
+    z-index: 1000;
+    bottom: 30px;
+    left:50%;
+    width: 335px;
+    height: 402px;
+    border-radius: 16px;
+    background: var(--color-white);
+    box-shadow: -10px -5px 30px rgb(141 141 141 / 10%);
+    color: black;
+    transform:translate(-50%, 200%);
+  }
+}
+
+.cookie-alert.active {
+  transform: translate(-50%, 0);
+  transition: transform 0.2s ease;
+}
+
+.cookie-alert__container {
+  display: flex;
+
+  /* margin-bottom: 30px; */
+  padding: 30px;
+}
+
+@media (width <= 376px) {
+  .cookie-alert__container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+}
+
+.cookie-alert__left {
+  padding-right: 130px;
+}
+
+@media (width <= 376px) {
+  .cookie-alert__left {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .cookie-alert__text {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 140%;
+  }
+}
+
+.cookie-alert__right {
+  display: flex;
+  margin-right: 30px;
+  gap: 20px;
+}
+
+@media (width <= 376px) {
+  .cookie-alert__right {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    gap: 20px;
+  }
+
+  .cookie-alert__right button {
+    width: 100%;
+  }
+}
+
+#cookie-alert__decine {
+  position: relative;
+  border: 2px solid var(--color-primary-01);
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+#cookie-alert__decine::before {
+	position: absolute;
+  z-index: -1;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+  border-radius: 16px;
+	background-color: var(--color-primary-04);
+	content:'';
+	transition: all 200ms ease;
+}
+
+#cookie-alert__decine:hover {
+  transform: scale(1.1);
+}
+
+#cookie-alert__decine:hover::before {
+	width: 100%;
+  height: 100%;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0 0 0 / 30%);
+  opacity: 0;
+  overflow-y: auto;
+  transition: opacity 0.2s, visibility 0.2s;
+  visibility: hidden;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__container {
+  position: relative;
+  display: flex;
+  max-width: calc(416px - 80px);
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 20px;
+  margin: 30px 20px;
+  background-color: var(--color-grayscale-07);
+  color: var(--color-black);
+}
+
+@media (width <= 376px) {
+  .modal__container {
+    padding: 20px 16px;
+  }
+}
+
+.modal__form.inactive {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 5px;
+  border: none;
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+@media (width <= 376px) {
+  .close {
+    top: 8px;
+  }
+}
+
+.modal__element {
+  margin-bottom: 10px;
+}
+
+.modal__element_last {
+  margin-bottom: 20px;
+}
+
+.modal__label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal__label span {
+  color: var(--color-additional-01);
+}
+
+.modal__input {
+  display: block;
+  width: calc(100% - 32px);
+  height: 40px;
+  padding: 9px 16px;
+  border: 1px solid var(--color-grayscale-20);
+  border-radius: 14px;
+  color: var(--color-black);
+}
+
+.modal__input:focus {
+  background-color: #A7A7A7;
+}
+
+.modal__input._error {
+  border: 1px solid var(--color-additional-02);
+}
+
+.modal__element._error::after {
+  display: block;
+  margin-top: 4px;
+  color: var(--color-additional-02);
+  content: "This field is required.";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.modal__error {
+  display: none;
+  margin-bottom: 20px;
+  color: var(--color-additional-02);
+}
+
+.modal__error.active {
+  display: block;
+}
+
+@media (width <= 376px) {
+  .modal__input {
+    height: calc(40px - 18px);
+  }
+}
+
+.modal__rules {
+  max-width: 337px;
+  margin-bottom: 20px;
+}
+
+.modal__link {
+  color: var(--color-primary-01);
+  text-decoration: underline;
+}
+
+.modal__thankYou {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (width <= 376px) {
+  .modal__send {
+    width: 100%;
+  }
+}
+
+.modal__thankYou.inactive {
+  display: none;
+}
+
+.modal__headingText {
+  margin: 23px 0 20px;
+}
+
+.modal__text {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal__button {
+  width: 100%;
+}

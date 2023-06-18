@@ -1,0 +1,52 @@
+.home__statistics {
+  background-color: var(--color-primary-01);
+}
+
+.statistics__container {
+  display: flex;
+  max-width: 1440px;
+  justify-content: center;
+  padding: 40px 0;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  grid-gap: 100px;
+}
+
+@media (width <= 376px) {
+  .statistics__container {
+    flex-direction: column;
+    padding: 40px 0 40px 16px;
+    margin-bottom: 80px;
+    grid-gap: 40px;
+  }
+}
+
+.statistics__interest {
+  margin-bottom: 16px;
+}
+
+@media (width <= 376px) {
+  .statistics__element {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .statistics__interest {
+    margin-bottom: 0;
+    font-feature-settings: 'liga' off;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 106%;
+  }
+
+  .statistics__text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+  }
+
+  .statistics__text br {
+    display: none;
+  }
+}

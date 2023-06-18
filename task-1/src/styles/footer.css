@@ -1,0 +1,162 @@
+.footer {
+  background-color: var(--color-grayscale-01);
+}
+
+.footer__container {
+  display: flex;
+  max-width: calc(1440px - 120px);
+  flex-direction: column;
+  padding: 40px 60px;
+  margin: 0 auto;
+}
+
+@media (width <= 376px) {
+  .footer__container {
+    padding: 20px 16px;
+  }
+}
+
+.footer__top {
+  display: flex;
+  align-items: center;
+}
+
+@media (width <= 376px) {
+  .footer__top {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 125px;
+}
+
+@media (width <= 376px) {
+  .footer__logo {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .footer__logo img {
+    max-width: 42px;
+    max-height: 42px;
+  }
+
+  .footer__logo h3 {
+    font-size: 29.6px;
+    font-weight: 600;
+    line-height: 14px;
+  }
+}
+
+.footer__logo h3 {
+  margin-left: 5px;
+}
+
+.footer__element {
+  margin-right: 40px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.footer__elements_mobile {
+  display: none;
+}
+
+@media (width <= 376px) {
+  .footer__navigation {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    gap: 16px 0;
+  }
+
+  .footer__element {
+    margin-right: 0;
+  }
+
+  .footer__elements_mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+}
+
+.footer__app {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+@media (width <= 376px) {
+  .footer__app {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 0;
+    gap: 20px;
+  }
+}
+
+.footer__button {
+  margin-right: 20px;
+}
+
+@media (width <= 376px) {
+  .footer__button {
+    margin-bottom: 20px;
+  }
+}
+
+.footer_link {
+  margin-left: 20px;
+}
+
+@media (width <= 376px) {
+  .footer_link {
+    margin-left: 0;
+  }
+}
+
+.footer__separation::before {
+  display: block;
+  border: 2px solid #444;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  content: "";
+}
+
+@media (width <= 376px) {
+  .footer__separation::before {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+.footer__bottom {
+  display: flex;
+}
+
+.footer__text {
+  color: var(--color-grayscale-03);
+}
+
+.footer__rules {
+  display: flex;
+  justify-content: end;
+  margin-left: auto;
+}
+
+@media (width <= 376px) {
+  .footer__rules {
+    display: none;
+  }
+}
+
+.footer__link-rule {
+  margin-left: 20px;
+  color: var(--color-grayscale-03);
+}

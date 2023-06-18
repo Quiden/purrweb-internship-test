@@ -1,0 +1,121 @@
+.home__textAnimation {
+  margin-bottom: 146px;
+}
+
+@media (width <= 376px) {
+  .home__textAnimation {
+    margin-bottom: 79px;
+  }
+}
+
+.textAnimation__phone {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  margin-left: -154px;
+
+  /* margin: 0 auto; */
+}
+
+@media (width <= 376px) {
+  .textAnimation__phone {
+    margin-left: 0;
+    transform:translate(-50%, 0);
+  }
+
+  .textAnimation__image {
+    max-width: 228px;
+    max-height: 461px;
+  }
+}
+
+.textAnimation__rows {
+  overflow: hidden;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+@media (width <= 376px) {
+  .textAnimation__text {
+    font-feature-settings: 'liga' off;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 106%;
+  }
+}
+
+.textAnimation__row1, .textAnimation__row2 {
+  margin-bottom: 60px;
+}
+
+@media (width <= 376px) {
+  .textAnimation__row1, .textAnimation__row2 {
+    margin-bottom: 93px;
+  }
+}
+
+.textAnimation__row1 {
+  left: 0;
+  margin-top: 46px;
+}
+
+.textAnimation__row2 {
+  left: -100px;
+}
+
+.textAnimation__row3 {
+  left: -400px;
+  margin-bottom: 0;
+}
+
+@media (width <= 376px) {
+  .textAnimation__row3 {
+    margin-bottom: 61px;
+  }
+}
+
+.textAnimation__row1, .textAnimation__row2, .textAnimation__row3 {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+
+.textAnimation__rows * {
+  flex-shrink: 0;
+}
+
+.textAnimation__text_green {
+  color: var(--color-secondary-02);
+}
+
+.textAnimation__transparent {
+  color: var(--color-grayscale-01);
+  text-shadow: 
+		-0   -1px 0   #444,
+    0   -1px 0   #444,
+		-0    1px 0   #444,
+    0    1px 0   #444,
+		-1px -0   0   #444,
+    1px -0   0   #444,
+		-1px  0   0   #444,
+    1px  0   0   #444,
+		-1px -1px 0   #444,
+    1px -1px 0   #444,
+		-1px  1px 0   #444,
+    1px  1px 0   #444,
+		-1px -1px 0   #444,
+    1px -1px 0   #444,
+		-1px  1px 0   #444,
+    1px  1px 0   #444;
+}
+
+.textAnimation__text_purple {
+  color: var(--color-primary-02);
+}
+
+.textAnimation__text_orange {
+  color: var(--color-secondary-01);
+}

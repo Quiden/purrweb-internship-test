@@ -17,20 +17,20 @@ const main = () => {
 
 const mainSlider = () => {
     initSliders()
-    drawLeft();
-    drawLeft();
-    drawLeft();
+    for (let i = 0; i < slides.length; i++) {
+        drawLeft();
+    }
     // console.log(step);
     buttonNext.addEventListener("click", left);
     buttonPrev.addEventListener("click", right);
 }
 
 const initSliders = () => {
-    viewport = document.getElementById('slider').offsetWidth;
-    buttonNext = document.getElementById('slider-next');
-    buttonPrev = document.getElementById('slider-prev');
-    elements = document.querySelectorAll('.slider-indicator');
-    elements[currentImage - 1].style.background = 'red';
+    viewport = document.getElementById('slider-wrapper').offsetWidth;
+    buttonNext = document.getElementById('button-next');
+    buttonPrev = document.getElementById('button-prev');
+    elements = document.querySelectorAll('.dot');
+    // elements[currentImage - 1].style.background = 'red';
     console.log(viewport);
     slides = document.querySelectorAll('.slide');
 
@@ -47,20 +47,19 @@ const drawLeft = () => {
     slide.classList.add('slide');
     slide.appendChild(sliders[step]);
     slide.style.left = offset * viewport + 'px';
-    document.querySelector('.slider-wrapper').appendChild(slide);
+    document.querySelector('.slider-line').appendChild(slide);
 
     step + 1 == slides.length ? step = 0: step++;
-    offset + 1 == 2 ? offset = 1: offset++;
+    offset + 1 == slides.length - 1 ? offset = 4: offset++;
 }
 
 const drawRight = () => {
     let slide = document.createElement('div');
     slide.classList.add('slide');
     slide.appendChild(sliders[step - 3 <= 0 ? 5 + (step - 3): step - 4]);
-    // debugger;
     slide.style.left = -1 * viewport + 'px';
-    document.querySelector('.slider-wrapper').insertBefore(slide, document.getElementById('slider-wrapper').firstChild);
-    console.log(document.getElementById('slider-wrapper'));
+    document.querySelector('.slider-line').insertBefore(slide, document.getElementById('slider-line').firstChild);
+    console.log(document.getElementById('slider-line'));
 
     step - 1 < 0 ? step = slides.length - 1: step--;
 }
@@ -146,19 +145,19 @@ const goToElement = (images) => {
     slide.classList.add('slide');
     slide.appendChild(sliders[currentImage - 1 == 0 ? 5: currentImage - 2]);
     slide.style.left = -1 * viewport + 'px';
-    document.querySelector('.slider-wrapper').appendChild(slide);
+    document.querySelector('.slider-line').appendChild(slide);
 
     let slide2 = document.createElement('div');
     slide2.classList.add('slide');
     slide2.appendChild(sliders[currentImage - 1]);
     slide2.style.left = 0 * viewport + 'px';
-    document.querySelector('.slider-wrapper').appendChild(slide2);
+    document.querySelector('.slider-line').appendChild(slide2);
 
     let slide3 = document.createElement('div');
     slide3.classList.add('slide');
     slide3.appendChild(sliders[currentImage + 1 == 7 ? 0: currentImage]);
     slide3.style.left = 1 * viewport + 'px';
-    document.querySelector('.slider-wrapper').appendChild(slide3);
+    document.querySelector('.slider-line').appendChild(slide3);
     // alert(currentImage);
 }
 

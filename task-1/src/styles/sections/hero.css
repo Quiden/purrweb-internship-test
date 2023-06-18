@@ -1,0 +1,270 @@
+.home__hero {
+  margin-bottom: 80px;
+  background-color: var(--color-grayscale-01);
+}
+
+.hero__container {
+  max-width: calc(1440px - 120px);
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+@media (width <= 376px) {
+  .hero__container {
+    padding: 0 16px;
+  }
+}
+
+.hero__mainInfo {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+@media (width <= 376px) {
+  .hero__mainInfo {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}
+
+.mainInfo__left {
+  max-width: 671px;
+  margin: 82px 0 0 50px;
+}
+
+@media (width <= 376px) {
+  .mainInfo__left {
+    margin: 51px 0 0;
+  }
+}
+
+.mainInfo__headingText {
+  margin-bottom: 20px;
+}
+
+@media (width <= 376px) {
+  .mainInfo__headingText {
+    font-feature-settings: 'liga' off;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 106%;
+  }
+}
+
+.mainInfo__text {
+  max-width: 534px;
+  margin-bottom: 40px;
+}
+
+@media (width <= 376px) {
+  .mainInfo__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.mainInfo__button {
+  margin-bottom: 140px;
+}
+
+@media (width <= 376px) {
+  .mainInfo__button {
+    width: 100%;
+  }
+}
+
+.mainInfo__right {
+  position: relative;
+  left: 201px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+@media (width <= 376px) {
+  .mainInfo__right {
+    left: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.mainInfo__hero {
+  position: relative;
+  z-index: 6;
+
+  /* height: 100%;
+  width: 100%; */
+  left: -75px;
+}
+
+.mainInfo__background {
+  /* height: 100%;
+  width: 100%; */
+  position: absolute;
+  z-index: 5;
+}
+
+@media (width <= 376px) {
+  .mainInfo__hero {
+    left: 0;
+    max-width: 100%;
+    max-height: 360px;
+  }
+  
+  .mainInfo__background {
+    max-width: 100%;
+  }
+}
+
+.hero__aboutBudss {
+  display: grid;
+  margin-bottom: 100px;
+  grid-template-areas:
+    "aboutBudss_head aboutBudss_head"
+    "aboutBudss_left aboutBudss_right"
+  ;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media (width <= 376px) {
+  .hero__aboutBudss {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+}
+
+.aboutBudss__headingText {
+  margin-bottom: 80px;
+  grid-area: aboutBudss_head;
+}
+
+@media (width <= 376px) {
+  .aboutBudss__headingText {
+    margin-bottom: 30px;
+    font-feature-settings: 'liga' off;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 106%;
+  }
+}
+
+.aboutBudss__left {
+  margin-right: 131px;
+  grid-area: aboutBudss_left;
+}
+
+@media (width <= 376px) {
+  .aboutBudss__left {
+    margin-right: 0;
+  }
+}
+
+.aboutBudss__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutBudss__text {
+  position: relative;
+  z-index: 4;
+  max-width: 410px;
+}
+
+@media (width <= 376px) {
+  .aboutBudss__text {
+    max-width: 268px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+}
+
+.aboutBudss__line {
+  position: relative;
+  bottom: 42px;
+  left: 54px;
+  max-width: 355px;
+  height: 45px;
+}
+
+@media (width <= 376px) {
+  .aboutBudss__line {
+    bottom: 36px;
+    left: 35px;
+    max-width: 234px;
+  }
+}
+
+.aboutBudss__background {
+  position: relative;
+  top: 104px;
+}
+
+@media (width <= 376px) {
+  .aboutBudss__background {
+    display: none;
+  }
+}
+
+.aboutBudss__background-1, .aboutBudss__background-2 {
+  position: relative;
+  right: 60px;
+}
+
+.aboutBudss__background-1 {
+  max-width: 275px;
+  height: 427px;
+}
+
+.aboutBudss__background-2 {
+  top: -175px;
+  max-width: 418px;
+  height: 228px;
+  margin-bottom: -75px;
+}
+
+.aboutBudss__right {
+  grid-area: aboutBudss_right;
+}
+
+.aboutBudss__elements {
+  display: grid;
+  grid-gap: 70px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (width <= 376px) {
+  .aboutBudss__elements {
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.element {
+  /* max-width: 321px; */
+}
+
+.element__head {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (width <= 376px) {
+  .element__head {
+    font-feature-settings: 'liga' off;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 106%;
+  }
+
+  .element__text {
+    max-width: 321px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}

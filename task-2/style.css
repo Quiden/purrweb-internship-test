@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -9,25 +14,43 @@
   background-color: aliceblue;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .button {
+  padding: 5px;
   height: 40px;
   border-radius: 5px;
 }
 
-#slider {
+#slider-wrapper {
   height: 200px;
   width: 300px;
   margin: 0 20px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
-.slider-wrapper {
-  height: 200px;
-  width: 100%;
+.slider-line {
+  display: flex;
   position: relative;
+  left: 0;
 }
 
-.slide {
-  position: absolute;
-  /* transition: 0.5s; */
+.dots-wrapper {
+  margin-top: 20px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+  border: none;
+  border-radius: 50%;
+}
+
+.active-dot {
+  background-color: black;
 }

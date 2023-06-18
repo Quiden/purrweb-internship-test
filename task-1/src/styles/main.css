@@ -1,0 +1,32 @@
+.main {
+  margin: 0 auto;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+/* @media (max-width: 376px) {
+  .main {
+    max-width: 375px;
+    overflow: hidden;
+  }
+} */
+
+@media (width <= 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (width <= 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (width <= 767px) {
+  .container {
+    max-width: none;
+  }
+}

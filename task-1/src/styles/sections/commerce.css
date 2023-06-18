@@ -1,0 +1,155 @@
+.home__commerce {
+  background-color: var(--color-grayscale-06);
+  color: var(--color-grayscale-00);
+}
+
+.commerce__container {
+  max-width: calc(1440px - 120px);
+  padding: 100px 60px;
+  margin: 0 auto;
+}
+
+@media (width <= 376px) {
+  .commerce__container {
+    padding: 40px 0 40px 16px;
+    margin: 0 auto;
+  }
+}
+
+.commerce__call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  border: 1px solid var(--color-grayscale-04);
+  border-radius: 60px;
+  margin-bottom: 100px;
+}
+
+@media (width <= 376px) {
+  .commerce__call {
+    padding: 40px 20px;
+    margin-right: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+.call__head {
+  margin-bottom: 40px;
+}
+
+@media (width <= 376px) {
+  .call__head {
+    font-feature-settings: 'liga' off;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 106%;
+    text-align: center;
+  }
+
+  .call__button {
+    width: 100%;
+  }
+}
+
+.commerce__social {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+@media (width <= 376px) {
+  .commerce__social {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}
+
+.social__headingText {
+  max-width: 822px;
+  margin-bottom: 20px;
+}
+
+@media (width <= 376px) {
+  .social__headingText {
+    font-feature-settings: 'liga' off;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 106%;
+  }
+}
+
+.social__text {
+  max-width: 537px;
+}
+
+@media (width <= 376px) {
+  .social__text {
+    max-width: 340px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}
+
+.social__right {
+  display: flex;
+  align-items: center;
+  gap: 40px
+}
+
+@media (width <= 376px) {
+  .social__right {
+    margin-top: 52px;
+    margin-bottom: 20px;
+    gap: 28px;
+  }
+}
+
+.social__icon {
+  position: relative;
+}
+
+@media (width <= 376px) {
+  .social__icon {
+    max-width: 64px;
+    max-height: 64px;
+  }
+}
+
+.social__icon_facebook, .social__icon_inst {
+  top: -45px
+}
+
+.social__icon_twitter, .social__icon_tiktok {
+  top: 45px
+}
+
+@media (width <= 376px) {
+  .social__icon_facebook, .social__icon_inst {
+    top: -32px
+  }
+  
+  .social__icon_twitter, .social__icon_tiktok {
+    top: 32px
+  }
+}
+
+.commerce__partners {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (width <= 376px) {
+  .commerce__partners {
+    display: grid;
+    align-items: center;
+    padding: 40px 20px;
+    grid-gap: 30px 40px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .commerce__partners img {
+    display: inline-block;
+    max-width: 100%;
+  }
+}
